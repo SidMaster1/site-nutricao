@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F4F7;
+}
+
+.align {
+    margin: 0 auto;      
+    width: 100%;          
+    max-width: 1200px;   
+    padding: 0 20px; 
+}
+
+.header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.6s
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    
+}
+.menu a {
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    
+}
+.logo a {
+    font-size: 28px;
+    color: white;
+}
+.destaque {
+    color: #7dc142;
+}
+
+.menu ul li {
+    margin-right: 15px;
+    display: inline-block;
+    list-style: none;
+}
+
+.menu .link-menu:hover {
+    color: #7dc142;
+    transition: 0.3s;
+}
+
+.banner {
+    z-index: 1;
+    background: url(img/banner.png) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.banner-content {
+    z-index: 1;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajuste a largura da sobreposição conforme necessário */
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+  }
+
+
+.title-banner {
+    font-weight: 800;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.banner-description {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    z-index: 1;
+    max-width: 400px;
+    letter-spacing: 1.2px;
+    padding-bottom: 15px;
+}
+
+.banner-btn {
+    font-size: 17px;
+    color: #ffff;
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #9B287B;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: #541E4E;
+}
+
+.profile {
+    color: white;
+    width: 100%;
+    background-color: #0D1321;
+    
+}
+
+.flex {
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img img {
+    width: 180px;       
+    height: 180px;          
+    border-radius: 50%;     
+    object-fit: cover;      
+    overflow: hidden;      
+}
+
+.profile h2 {
+    font-size: 18px;
+}
+
+.profile-info {
+    font-size: 14px;
+    color: #d8dadf;
+    padding-top: 10px;
+    max-width: 500px;
+}
+
+.icon-zap {
+    z-index: 100;
+    font-size: 40px;
+    right: 30px;
+    color: #ffffff;
+    background-color: #7dc142;
+    position: fixed;
+    bottom: 60px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px #c0bdbd;
+    padding-bottom: 15px;
+}
+
+.icon-zap:hover {
+    background-color: #fff;
+    color: #029e3b;
+    
+}
+
+.title-section {
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0;
+    
+}
+.cards img {
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+}
+
+.cards {
+    border-radius: 8px;
+    width: 240px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    
+}
+.cards:hover {
+    box-shadow: 0 0 0 2px #7dc142;
+}
+.card-container {
+    color: white;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+.img {
+    padding: 0 0 15px;
+    border-radius: 8px;
+    background-color: #0D1321;
+}
+
+.card-title {
+    color: #8ec95a;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-content {
+    color: #d8dadf;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.main-btn {
+    text-align: center;
+    padding: 30px;
+}
+
+.footer-menu a {
+    color: black;
+}
+
+.footer-menu {
+    line-height: 220px;
+    background-color: #0D1321;
+    width: 100%;
+}
