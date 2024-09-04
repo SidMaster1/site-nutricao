@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,18 +9,19 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #F2F4F7;
 }
 
 .align {
     margin: 0 auto;      
     width: 100%;          
-    max-width: 1200px;   
+    max-width: 1200px;  
     padding: 0 20px; 
 }
 
 .header-container {
+    padding: 30px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,7 +48,7 @@ body {
     color: white;
 }
 .destaque {
-    color: #7dc142;
+    color: #cc3f0c;
 }
 
 .menu ul li {
@@ -55,7 +58,7 @@ body {
 }
 
 .menu .link-menu:hover {
-    color: #7dc142;
+    color: #CC3F0C;
     transition: 0.3s;
 }
 
@@ -69,10 +72,11 @@ body {
 
 .banner-content {
     z-index: 1;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 600px;
 }
 
 .banner::before {
@@ -82,76 +86,144 @@ body {
     left: 0;
     width: 100%; /* Ajuste a largura da sobreposição conforme necessário */
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(90deg, #000000C4 0%, #E1D2C500 100%);;
     z-index: -1;
   }
 
 
 .title-banner {
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     font-size: 30px;
-    margin-bottom: 20px;
 }
 .banner-description {
     color: white;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     z-index: 1;
-    max-width: 400px;
-    letter-spacing: 1.2px;
-    padding-bottom: 15px;
+    letter-spacing: 0.7px;
+    padding: 20px 0 20px;
 }
 
 .banner-btn {
-    font-size: 17px;
+    font-weight: 500;
+    font-size: 15px;
     color: #ffff;
     z-index: 1;
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #9B287B;
+    background-color: #CC3F0C;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
+    letter-spacing: 3px;
+    border-radius: 5px;
     border: none;
     transition: background-color 0.3s;
 }
 
 .banner-btn:hover {
-    background-color: #541E4E;
+    background-color: #d25528;
+}
+
+.main-content {
+    margin: 50px 0 50px;
+}
+
+.title-section {
+    font-weight: 500;
+    font-size: 24px;
+    color: #252525;
+    text-align: center;
+    padding: 50px 0 40px;
+    
+}
+.cards img {
+    border-radius: 8px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;      
+    overflow: hidden; 
+}
+
+.cards {
+    border-radius: 8px;
+    width: 280px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    
+}
+.cards:hover {
+    box-shadow: 0 0 0 2px #cc3f0c;
+}
+.card-container {
+    color: white;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+
+.img {
+    border-radius: 8px;
+    padding: 0 0 15px;
+    background-color: #E6E3E9;
+}
+
+.img img {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.card-title {
+    color: #cc3f0c;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-content {
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#sobre {
+    background-color: #E6E3E9;
 }
 
 .profile {
-    color: white;
-    width: 100%;
-    background-color: #0D1321;
+    gap: 20px;
+    display: flex;
     
 }
-
-.flex {
-    padding: 50px 0px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.profile-img img {
-    width: 180px;       
-    height: 180px;          
-    border-radius: 50%;     
+.profile img {
+    border-radius: 2px;
+    width: 400px;
+    min-width: 200px;      
     object-fit: cover;      
-    overflow: hidden;      
+    overflow: hidden; 
 }
 
+.profile-content {
+    color: #0D1321;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 0 30px;
+}
+h2 {
+    text-transform: uppercase;
+}
 .profile h2 {
     font-size: 18px;
 }
 
 .profile-info {
-    font-size: 14px;
-    color: #d8dadf;
-    padding-top: 10px;
-    max-width: 500px;
+    font-size: 15px;
+    padding-top: 20px;
 }
 
 .icon-zap {
@@ -178,63 +250,10 @@ body {
     
 }
 
-.title-section {
-    font-size: 20px;
-    text-align: center;
-    padding: 40px 0;
-    
-}
-.cards img {
-    border-radius: 8px;
-    width: 100%;
-    height: 200px;
-}
 
-.cards {
-    border-radius: 8px;
-    width: 240px;
-    margin-bottom: 20px;
-    transition: box-shadow 0.3s ease;
-    
-}
-.cards:hover {
-    box-shadow: 0 0 0 2px #7dc142;
-}
-.card-container {
-    color: white;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-
-.img {
-    padding: 0 0 15px;
-    border-radius: 8px;
-    background-color: #0D1321;
-}
-
-.card-title {
-    color: #8ec95a;
-    font-size: 17px;
-    text-align: center;
-    padding: 10px;
-}
-
-.card-content {
-    color: #d8dadf;
-    font-size: 14px;
-    text-align: center;
-    padding: 0 10px;
-}
 
 .main-btn {
-    text-align: center;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 .footer-menu a {
@@ -280,7 +299,7 @@ body {
 }
 
 /* Estilos para mobile */
-@media (max-width: 768px) {
+@media (max-width: 915px) {
     .menu ul {
         display: none;
         gap: 10px;
@@ -326,13 +345,31 @@ body {
 }
 
 @media (max-width: 768px) {
-    .flex {
-        padding: 50px 10px;
-        
+    .title-section {
+        font-size: 18px;
+        padding: 0 10px 10px;
     }
+}
+
+@media (max-width: 768px) {
 
     .profile h2 {
         font-size: 16px;
     }
-    
+    .profile {
+        flex-direction: column;
+        align-items: center;
     }
+    
+}
+
+@media (max-width: 915px){
+    .banner {
+        height: 100vh;
+        padding-top: 80px;
+    }
+    .banner-content {
+        padding-top: 20px;
+    }
+}
+
