@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header-container ">
         <div class="align">
             <nav class="menu">
@@ -20,7 +21,7 @@
                     <ul>
                         <li><a class="link-menu" href="#">ÍNICIO</a></li>
                         <li><a class="link-menu" href="#sobre">SOBRE</a></li>
-                        <li><a class="link-menu" href="#">CALCULAR IMC</a></li>
+                        <li><a class="link-menu" href="#calculadora-Imc">CALCULAR IMC</a></li>
                     </ul>
                 </div>
                 <div class="menu-toggle ">
@@ -28,10 +29,10 @@
                 </div>
             </nav>
         </div>
-    </header>
-    <!--Banner-->
+    </header> <!--Ending Header-->
 
-    <div class="banner">
+    <!--Banner-->
+    <section class="banner">
         <div class="align">
             <div class="banner-content">
                 <h2 class="title-banner"> TRANSFORME SUA VIDA ALIMENTAR COM GEISA SILVA</h2>
@@ -42,56 +43,58 @@
                 </p>
                 <div><button class="banner-btn">PRÉ-CONSULTA</button></div>
             </div>
-
         </div>
-    </div>
+    </section> <!--Ending Banner-->
 
-    <!--Cards-->
+    <!--Main-->
     <main class="main-content ">
         <h2 class="title-section">Os <span class="destaque">4 principais pilares</span> que irão transformar o seu corpo
         </h2>
+        <!-- Cards -->
         <section class="card-container align">
-            <div class="cards">
-                <div class="img">
-                    <img src="img/nutricionista.jpg" alt="Alimentação">
+            <div class="card-content">
+                <div class="card">
+                    <img class="img-card" src="img/nutricionista.jpg" alt="Alimentação">
                     <h2 class="card-title">Plano Alimentar</h2>
-                    <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    <p class="card-descripition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
                         possimus
                         labore dolorem illo
                         laborum,</p>
                 </div>
             </div>
-            <div class="cards">
-                <div class="img">
-                    <img src="img/corrida.jpg" alt="Exercício">
+            <div class="card-content">
+                <div class="card">
+                    <img class="img-card" src="img/corrida.jpg" alt="Exercício">
                     <h2 class="card-title">Exercício Físicos</h2>
-                    <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    <p class="card-descripition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
                         possimus
                         labore dolorem illo
                         laborum,</p>
                 </div>
 
             </div>
-            <div class="cards">
-                <div class="img"> <img src="img/meditar.jpeg" alt="Mentalidade">
+            <div class="card-content">
+                <div class="card">
+                    <img class="img-card" src="img/meditar.jpeg" alt="Mentalidade">
                     <h2 class="card-title">Mudança de Mentalidade</h2>
-                    <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    <p class="card-descripition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
                         possimus
                         labore dolorem illo
                         laborum,</p>
                 </div>
             </div>
-            <div class="cards">
-                <div class="img">
-                    <img src="img/sono.jpg" alt="Sono">
+            <div class="card-content">
+                <div class="card">
+                    <img class="img-card" src="img/sono.jpg" alt="Sono">
                     <h2 class="card-title">Sono e Descanso</h2>
-                    <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    <p class="card-descripition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
                         possimus
                         labore dolorem illo
                         laborum,</p>
                 </div>
             </div>
-        </section>
+        </section> <!--Ending Cards-->
+
         <!--Profile-->
         <section id="sobre" class="main-content ">
             <div class="align">
@@ -114,15 +117,78 @@
                     </div>
                 </div>
             </div>
+        </section> <!--Ending Profile-->
+
+        <!--Calculadora IMC-->
+        <section id="calculadora-Imc" class="main-form">
+            <div class="align">
+                <h2>Calcular IMC</h2>
+                
+                <form class="form-imc">
+                    <input class="input-imc" type="text" maxlength="3" id="height" placeholder="Altura em (cm):">
+                    <input class="input-imc" type="text" maxlength="3" id="weight" placeholder="Peso em (kg):">
+                </form>
+                <div class="main-btn">
+                    <button type="button" class="banner-btn" id="btn">calcular</button>
+                    
+                </div>
+            </div>
         </section>
+        <section class="classification align">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td colspan="3">Classificação IMC</td>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="destaque">IMC</td>
+                        <td class="destaque">Classificação</td>
+                        <td style="text-align: center;" class="destaque">Grau</td>
+                    </tr> 
+                    <tr class="result-calc" id="result-1">
+                        <td>Menor que 18,5</td>
+                        <td>Magreza</td>
+                        <td style="text-align: center;">0</td>
+                    </tr>
+                    <tr class="result-calc" id="result-2">
+                        <td>Entre 18,5 e 24,9</td>
+                        <td>Normal</td>
+                        <td style="text-align: center;">0</td>
+                    </tr>
+                    <tr class="result-calc" id="result-3">
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Sobrepeso</td>
+                        <td style="text-align: center;">I</td>
+                    </tr>
+                    <tr class="result-calc" id="result-4">
+                        <td>Entre 30,0 e 39,9</td>
+                        <td>Obesidade</td>
+                        <td style="text-align: center;">II</td>
+                    </tr>
+                    <tr class="result-calc" id="result-5">
+                        <td>Maior que 40,0</td>
+                        <td>Obesidade Grave</td>
+                        <td style="text-align: center;">III</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>SEU IMC:</td>
+                        <td id="result-imc" style="text-align: center;" colspan="2"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <div class="btn-zap">
+            <a href="#" class="icon-zap"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
     </main>
-    <section></section>
-    <div class="btn-zap">
-        <a href="#" class="icon-zap"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
     <footer>
-        <div class="footer-menu">
-            <nav>
+        <div class="footer-menu ">
+            <nav class="menu align">
+                <p>&copy; Todos os direitos reservado</p>
                 <ul>
                     <li></li>
                 </ul>
