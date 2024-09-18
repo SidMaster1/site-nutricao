@@ -438,7 +438,12 @@ table thead tr td {
 
 @media (max-width: 768px) {
     table {
-        width: 450px;
+        width: auto;
+    }
+}
+@media (max-width: 320px) {
+    table {
+        width: auto;
     }
 }
 
