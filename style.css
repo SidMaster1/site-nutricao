@@ -21,13 +21,19 @@ body {
 }
 
 .header-container {
-    padding: 30px 0;
-    position: absolute;
+    padding: 20px 0;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     transition: 0.6s
+}
+
+.header-container.sticky {
+    padding: 0px;
+    background-color: #029e3b;
+    opacity: 0.98;
 }
 .menu {
     display: flex;
@@ -124,8 +130,9 @@ body {
     background-color: #d25528;
 }
 
-.main-content {
-    margin: 50px 0 50px;
+.main-content { 
+    margin-top: 50px;
+    scroll-margin-top: 100px;
 }
 
 .title-section {
@@ -136,7 +143,7 @@ body {
     padding: 50px 0 40px;
     
 }
-.cards img {
+.img-card {
     border-radius: 8px;
     width: 100%;
     height: 250px;
@@ -144,15 +151,12 @@ body {
     overflow: hidden; 
 }
 
-.cards {
+.card-content {
     border-radius: 8px;
     width: 280px;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease;
     
-}
-.cards:hover {
-    box-shadow: 0 0 0 2px #cc3f0c;
 }
 .card-container {
     color: white;
@@ -167,13 +171,13 @@ body {
 }
 
 
-.img {
+.card {
     border-radius: 8px;
     padding: 0 0 15px;
     background-color: #E6E3E9;
 }
 
-.img img {
+.img-card {
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -184,7 +188,7 @@ body {
     padding: 10px;
 }
 
-.card-content {
+.card-descripition {
     color: #000000;
     font-size: 14px;
     text-align: center;
@@ -226,17 +230,79 @@ h2 {
     padding-top: 20px;
 }
 
+.main-form h2 {
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.main-form {
+    color: black;
+    padding-top: 60px;
+    
+}
+.form-imc {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-imc {
+    background-color: transparent;
+    outline: none;
+    line-height: 20px;
+    max-width: 200px;
+    border: none;
+    border-bottom: 1px solid #98928e;
+}
+
+#btn {
+    text-transform: uppercase;
+}
+
+input[type=number]::-webkit-inner-spin-button{
+    appearance: none;
+}
+.classification {
+    padding-bottom: 60px;
+
+}
+table {
+    width: 600px;
+    border: none;
+    border-collapse: collapse;
+}
+
+tbody .destaque {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+table tr td {
+    padding: 0 15px;
+    line-height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #98928e;
+    text-transform: uppercase;
+}
+table thead tr td {
+    font-weight: 600;
+    color: #ffff;
+    border: none;
+    background-color: #029e3b;
+}
+
+
 .icon-zap {
     z-index: 100;
-    font-size: 40px;
+    font-size: 45px;
     right: 30px;
     color: #ffffff;
-    background-color: #7dc142;
+    background-color: #029e3b;
     position: fixed;
     bottom: 60px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 3px;
     text-align: center;
     text-decoration: none;
@@ -250,23 +316,18 @@ h2 {
     
 }
 
-
-
 .main-btn {
     padding: 30px 0;
 }
 
-.footer-menu a {
-    color: black;
-}
-
 .footer-menu {
-    line-height: 220px;
+    color: #c0bdbd;
+    line-height: 20px;
     background-color: #0D1321;
     width: 100%;
 }
 
-/* Mobile */
+/* Mobile-menu */
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -301,20 +362,22 @@ h2 {
 /* Estilos para mobile */
 @media (max-width: 915px) {
     .menu ul {
+        border-top: 1px solid #fff;
         display: none;
         gap: 10px;
         flex-direction: column;
         position: absolute;
         top: 80px;
         right: 0;
-        background-color: #7dc142;
+        background-color: #029e3b;
         width: 100%;
         padding: 20px 20px;
         text-align: start;
         z-index: 10;
+        
     }
     .menu .link-menu:hover {
-        color: #9B287B;
+        color: #CC3F0C;
     }
 
     .menu ul.active {
@@ -323,6 +386,10 @@ h2 {
 
     .menu-toggle {
         display: block;
+    }
+
+    .header-container {
+        padding: 0;
     }
 }
 
@@ -352,15 +419,26 @@ h2 {
 }
 
 @media (max-width: 768px) {
-
+    
     .profile h2 {
         font-size: 16px;
     }
     .profile {
         flex-direction: column;
-        align-items: center;
+        
+        justify-content: center;
+    }
+    .profile-content {
+        padding: 0;
+        margin: 0;
     }
     
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 450px;
+    }
 }
 
 @media (max-width: 915px){
@@ -373,3 +451,12 @@ h2 {
     }
 }
 
+@media (max-width: 420px) {
+    .profile {
+        align-items: center;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
